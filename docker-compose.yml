@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  scalable:
+    image: ${DOCKER_REGISTRY}scalable
+    build:
+      context: .
+      dockerfile: Scalable/Dockerfile

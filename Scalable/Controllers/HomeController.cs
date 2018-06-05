@@ -26,7 +26,15 @@ namespace Scalable.Controllers
             return Json(new JsonResponse() { Key="hexcode", Value=color, ResponseCode=200 });
         }
 
-        
+
+        public IActionResult Sample()
+        {
+            // do some intentional blocking on this 
+            //Task.Delay(delay).Wait();
+
+            return View();
+        }
+
 
         public IActionResult Error()
         {

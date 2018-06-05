@@ -26,6 +26,20 @@
     margin: 15px;
 }
 
+.style-me {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    border: 1px solid gray;
+    padding-top: 7px;
+    border-radius: 2px;
+    margin: 3px;
+}
+
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */

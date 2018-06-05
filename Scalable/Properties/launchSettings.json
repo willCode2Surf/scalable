@@ -2,8 +2,12 @@
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/Scalable",
+      "sslPort": 0
+    },
     "iisExpress": {
-      "applicationUrl": "http://localhost:4040",
+      "applicationUrl": "http://localhost:4000",
       "sslPort": 0
     }
   },
@@ -15,7 +19,7 @@
       }
     },
     "Scalable": {
-      "commandName": "Project",
+      "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

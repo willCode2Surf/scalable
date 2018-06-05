@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="style-container" style="margin-top:50px;">
+
+</div>
+<button id="btn-work" style="margin-top:50px;">DO WORK</button>
+<button id="btn-work" style="margin-top:50px;">DO WORK DELAY</button>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            console.info("started");
+
+            var items = 10;
+            for (var i = 0; i < items; i++) {
+                var $div = $("<div id='" + i + "'>" + i + "</div>")
+                $div.addClass('style-me');
+                $('.style-container').append($div);
+            }
+
+
+
+            $("#btn-work").click(function () {
+                $('.style-me').each(function () {
+                    var styleMe = $(this).attr("id");
+                    console.info("style me", styleMe);
+                    $.get("/home/hex", function (data) {
+                        console.info(data);
+                        //styleMe.attr('background-color', data.Value);
+                        $("#" + styleMe).attr('background-color', data.Value);
+                    });
+
+                })
+            });
+
+        });
+    </script>
+}
