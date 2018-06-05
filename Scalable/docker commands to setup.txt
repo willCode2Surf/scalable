@@ -1,0 +1,17 @@
+
+
+
+docker scripts
+
+
+cd C:\dev\scalable\Scalable
+
+
+docker build -t scalable .
+
+docker run -it --rm -p 5001:80 --name scalable_sample scalable
+
+docker service create --name scalable_servicebenjamin --publish 5100:80 scalable
+
+docker service scale scalable_servicebenjamin=100
+
